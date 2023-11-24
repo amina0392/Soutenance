@@ -83,8 +83,21 @@
 </div>
 
 <script type="text/javascript">
-
-    // YOUR CODE HERE
+    function accumulate() {
+    // On récupère la valeur saisi dasn le champs avec le id "n".
+    let nombres = document.getElementById("n").value;
+    // On déclare un tableau avec 1 comme valeur.
+    let tableau = [1];
+        // On crée une boucle qui parcour un indice initialisé à 1, et l'indice inférieur à 20 et on ajoute 1 à l'indice, à chaque ittération.
+        for (let i = 1; i < 20; i++) {
+        // On ajoute au tableau, son précedent indice [i-1] + indice parcouru + 1. Exp : on ajoute au tableau qui a déja pour valeur 1 : 1 (le premier indice de notre boucle) + 1 = 3.
+        tableau.push(tableau[i-1] + i + 1);
+        }
+    // On affiche le resultat du tableau
+    displayArray(tableau);
+    }
+    
+    
     
     
 </script>
